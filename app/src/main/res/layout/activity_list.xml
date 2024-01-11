@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0F6668"
+    tools:context=".ListActivity">
+
+
+    <TextView
+        android:id="@+id/textViewLookingFor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/looking_for"
+        android:textColor="#D9E8E6"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <SearchView
+        android:id="@+id/searchViewList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="45sp"
+        android:background="@drawable/circle_button"
+        android:iconifiedByDefault="false"
+        android:queryHint="@string/searchBar"
+        android:textSize="25sp">
+
+    </SearchView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40sp"
+        android:layout_marginTop="623sp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="3dp">
+
+        <ImageButton
+            android:id="@+id/buttonHome"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            app:srcCompat="@drawable/home_button" />
+
+        <ImageButton
+            android:id="@+id/buttonFavourite"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            app:srcCompat="@drawable/favourite_button" />
+
+        <ImageButton
+            android:id="@+id/buttonProfile"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:background="@color/black"
+            app:srcCompat="@drawable/profile_button" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="45sp"
+        android:layout_marginTop="95sp"/>
+
+
+</RelativeLayout>
